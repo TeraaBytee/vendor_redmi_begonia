@@ -20,6 +20,17 @@ soong_namespace {
 }
 
 android_app_import {
+	name: "EngineerMode",
+	owner: "redmi",
+	apk: "proprietary/priv-app/EngineerMode/EngineerMode.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+}
+
+android_app_import {
 	name: "ImsService",
 	owner: "redmi",
 	apk: "proprietary/priv-app/ImsService/ImsService.apk",
@@ -118,4 +129,3 @@ prebuilt_etc_xml {
 	sub_dir: "vintf/manifest",
 	soc_specific: true,
 }
-
